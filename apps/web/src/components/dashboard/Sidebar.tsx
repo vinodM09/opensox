@@ -15,6 +15,9 @@ import {
   StarIcon,
   DocumentTextIcon,
   Cog6ToothIcon,
+  HeartIcon,
+  EnvelopeIcon,
+  NewspaperIcon,
 } from "@heroicons/react/24/outline";
 import { useShowSidebar } from "@/store/useShowSidebar";
 import { signOut, useSession } from "next-auth/react";
@@ -22,6 +25,8 @@ import { ProfilePic } from "./ProfilePic";
 import { useSubscription } from "@/hooks/useSubscription";
 import { OpensoxProBadge } from "../sheet/OpensoxProBadge";
 import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
+import { useFilterStore } from "@/store/useFilterStore";
+import { Badge } from "@/components/ui/badge";
 
 const SIDEBAR_ROUTES = [
   {
@@ -110,7 +115,7 @@ export default function Sidebar({ overlay = false }: { overlay?: boolean }) {
         </IconWrapper>
       </div>
 
-      <div className="sidebar-body flex-grow flex-col overflow-y-auto px-3 py-4">
+      <div className="sidebar-body flex-grow flex-col overflow-y-auto px-3 py-4 space-y-1">
         {SIDEBAR_ROUTES.map((route) => {
           return (
             <Link href={route.path} key={route.path}>
@@ -122,6 +127,35 @@ export default function Sidebar({ overlay = false }: { overlay?: boolean }) {
             </Link>
           );
         })}
+        
+        <SidebarItem
+          itemName="Find projects"
+          onclick={handleFindProjects}
+          icon={<MagnifyingGlassIcon className="size-5" />}
+          collapsed={isCollapsed}
+        />
+        
+        <Link 
+          href="/dashboard/newsletters" 
+          className={getSidebarLinkClassName(pathname, "/dashboard/newsletters")}
+        >
+          <div className="relative">
+            <SidebarItem
+              itemName="Newsletters"
+              icon={<NewspaperIcon className="size-5" />}
+              collapsed={isCollapsed}
+            />
+            {!isCollapsed && (
+              <Badge 
+                variant="default" 
+                className="absolute right-2 top-1/2 -translate-y-1/2 bg-gradient-to-r from-[#a472ea] to-[#7150e7] text-white text-[10px] px-1.5 py-0.5 border-none"
+              >
+                PRO
+              </Badge>
+            )}
+          </div>
+        </Link>
+        
         <SidebarItem
           itemName="Request a feature"
           onclick={reqFeatureHandler}
