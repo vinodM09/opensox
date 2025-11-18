@@ -11,6 +11,8 @@ import {
   LegalContent,
 } from "@/components/legal";
 
+const EFFECTIVE_DATE = "January 8, 2024";
+
 export const metadata: Metadata = {
   title: "Cancellation and Refund Policy - Opensox AI",
   description:
@@ -22,11 +24,7 @@ export default function CancellationAndRefundPage() {
     <LegalPageLayout>
       <LegalPageHeader
         title="Cancellation and Refund Policy"
-        effectiveDate={new Date().toLocaleDateString("en-US", {
-          year: "numeric",
-          month: "long",
-          day: "numeric",
-        })}
+        effectiveDate={EFFECTIVE_DATE}
       />
 
       <LegalContent>
