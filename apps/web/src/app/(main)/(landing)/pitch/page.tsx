@@ -84,7 +84,7 @@ const Pitch = () => {
                   type: "spring",
                   delay: 0.5,
                 }}
-                className="text-center text-3xl lg:text-4xl tracking-tight font-bold text-brand-purple-light px-4"
+                className="text-center text-3xl lg:text-4xl tracking-tight font-bold text-brand-purple-light px-4 font-mono"
               >
                 the pitch
               </motion.h2>
@@ -103,15 +103,17 @@ const Pitch = () => {
                 }}
                 className="max-w-4xl mx-auto space-y-4"
               >
-                <h3 className="text-2xl lg:text-3xl font-medium text-brand-purple-light">
+                <h3 className="text-2xl lg:text-3xl font-medium text-brand-purple-light font-mono">
                   mission statement
                 </h3>
                 <p className="text-text-secondary font-medium text-lg lg:text-xl lowercase">
-                  the mission is to provide the most genuine and authentic help
-                  to you or people who struggle in open source to get the
-                  opportunities (jobs, internships, gsoc, lfx, etc) in open
-                  source. i&apos;m creating a product that i wish existed 4
-                  years ago when i started doing open source.
+                  the mission is{" "}
+                  <span className="underline decoration-brand-purple-light">
+                    to provide you the most genuine and authentic help
+                  </span>{" "}
+                  to get the opportunities (jobs, internships, gsoc, lfx, etc)
+                  in open source. i&apos;m creating a product that i wish
+                  existed 4 years ago when i started doing open source.
                 </p>
               </motion.div>
             </div>
@@ -129,7 +131,7 @@ const Pitch = () => {
                 }}
                 className="max-w-4xl mx-auto space-y-6"
               >
-                <h3 className="text-2xl lg:text-3xl font-medium text-brand-purple-light">
+                <h3 className="text-2xl lg:text-3xl font-medium text-brand-purple-light font-mono">
                   my goal
                 </h3>
                 <p className="text-text-secondary font-medium text-lg lg:text-xl lowercase">
@@ -185,7 +187,7 @@ const Pitch = () => {
                 }}
                 className="max-w-4xl mx-auto space-y-6"
               >
-                <h3 className="text-2xl lg:text-3xl font-medium text-brand-purple-light">
+                <h3 className="text-2xl lg:text-3xl font-medium text-brand-purple-light font-mono">
                   the plan
                 </h3>
                 <p className="text-text-secondary font-medium text-lg lg:text-xl lowercase">
@@ -253,13 +255,13 @@ const Pitch = () => {
                 }}
                 className="max-w-4xl mx-auto space-y-8"
               >
-                <h3 className="text-2xl lg:text-3xl font-medium text-brand-purple-light">
+                <h3 className="text-2xl lg:text-3xl font-medium text-brand-purple-light font-mono">
                   philosophies i follow
                 </h3>
 
                 {/* Philosophy #1 */}
                 <div className="space-y-4">
-                  <h4 className="text-xl lg:text-2xl font-medium text-brand-purple-light">
+                  <h4 className="text-xl lg:text-2xl font-medium text-brand-purple-light font-mono">
                     #1 stay small. stay effective.
                   </h4>
                   <div className="space-y-4 text-text-secondary font-medium text-lg lowercase">
@@ -339,7 +341,7 @@ const Pitch = () => {
 
                 {/* Philosophy #2 */}
                 <div className="space-y-4">
-                  <h4 className="text-xl lg:text-2xl font-medium text-brand-purple-light">
+                  <h4 className="text-xl lg:text-2xl font-medium text-brand-purple-light font-mono">
                     #2 go beyond what you promise.
                   </h4>
                   <div className="space-y-4 text-text-secondary font-medium text-lg lowercase">
@@ -372,7 +374,7 @@ const Pitch = () => {
                 }}
                 className="max-w-4xl mx-auto space-y-6"
               >
-                <h3 className="text-2xl lg:text-3xl font-medium text-brand-purple-light">
+                <h3 className="text-2xl lg:text-3xl font-medium text-brand-purple-light font-mono">
                   so how small?
                 </h3>
                 <p className="text-text-secondary font-medium text-lg lowercase">
@@ -423,7 +425,7 @@ const Pitch = () => {
                 }}
                 className="max-w-4xl mx-auto space-y-6"
               >
-                <h3 className="text-2xl lg:text-3xl font-medium text-brand-purple-light">
+                <h3 className="text-2xl lg:text-3xl font-medium text-brand-purple-light font-mono">
                   what existing investors said about me?
                 </h3>
                 <div className="space-y-4 text-text-secondary font-medium text-lg lowercase">
@@ -454,13 +456,13 @@ const Pitch = () => {
                 }}
                 className="max-w-4xl mx-auto space-y-8"
               >
-                <h3 className="text-2xl lg:text-3xl font-medium text-brand-purple-light">
+                <h3 className="text-2xl lg:text-3xl font-medium text-brand-purple-light font-mono">
                   questions you may have
                 </h3>
 
                 <div className="space-y-8">
                   <div className="space-y-3">
-                    <h4 className="text-xl font-medium text-brand-purple-light">
+                    <h4 className="text-xl font-medium text-brand-purple-light font-mono">
                       i&apos;m not an absolute beginner, so how does subscribing
                       to opensox.ai make sense to me?
                     </h4>
@@ -481,7 +483,7 @@ const Pitch = () => {
                   </div>
 
                   <div className="space-y-3">
-                    <h4 className="text-xl font-medium text-brand-purple-light">
+                    <h4 className="text-xl font-medium text-brand-purple-light font-mono">
                       will the quality of your service reduce as you grow?
                     </h4>
                     <p className="text-text-secondary font-medium text-lg lowercase">
@@ -492,7 +494,7 @@ const Pitch = () => {
                   </div>
 
                   <div className="space-y-3">
-                    <h4 className="text-xl font-medium text-brand-purple-light">
+                    <h4 className="text-xl font-medium text-brand-purple-light font-mono">
                       how does opensox.ai pro help me?
                     </h4>
                     <ul className="space-y-2 text-text-secondary font-medium text-lg pl-4 lowercase">
@@ -543,7 +545,7 @@ const Pitch = () => {
                   </div>
 
                   <div className="space-y-3">
-                    <h4 className="text-xl font-medium text-brand-purple-light">
+                    <h4 className="text-xl font-medium text-brand-purple-light font-mono">
                       how much time does it take to get the results?
                     </h4>
                     <p className="text-text-secondary font-medium text-lg lowercase">
@@ -560,7 +562,7 @@ const Pitch = () => {
                   </div>
 
                   <div className="space-y-3">
-                    <h4 className="text-xl font-medium text-brand-purple-light">
+                    <h4 className="text-xl font-medium text-brand-purple-light font-mono">
                       why should i trust you?
                     </h4>
                     <p className="text-text-secondary font-medium text-lg lowercase">
@@ -585,7 +587,7 @@ const Pitch = () => {
                   </div>
 
                   <div className="space-y-3">
-                    <h4 className="text-xl font-medium text-brand-purple-light">
+                    <h4 className="text-xl font-medium text-brand-purple-light font-mono">
                       are there any alternatives to what you provide?
                     </h4>
                     <p className="text-text-secondary font-medium text-lg lowercase">
@@ -597,7 +599,7 @@ const Pitch = () => {
                   </div>
 
                   <div className="space-y-3">
-                    <h4 className="text-xl font-medium text-brand-purple-light">
+                    <h4 className="text-xl font-medium text-brand-purple-light font-mono">
                       what&apos;s the difference between opensox pro and a
                       course?
                     </h4>
@@ -610,7 +612,7 @@ const Pitch = () => {
                   </div>
 
                   <div className="space-y-3">
-                    <h4 className="text-xl font-medium text-brand-purple-light">
+                    <h4 className="text-xl font-medium text-brand-purple-light font-mono">
                       is it for an absolute beginner?
                     </h4>
                     <p className="text-text-secondary font-medium text-lg lowercase">
@@ -619,7 +621,7 @@ const Pitch = () => {
                   </div>
 
                   <div className="space-y-3">
-                    <h4 className="text-xl font-medium text-brand-purple-light">
+                    <h4 className="text-xl font-medium text-brand-purple-light font-mono">
                       in what cases shouldn&apos;t i invest in opensox pro?
                     </h4>
                     <p className="text-text-secondary font-medium text-lg lowercase">
@@ -649,7 +651,7 @@ const Pitch = () => {
                   </div>
 
                   <div className="space-y-3">
-                    <h4 className="text-xl font-medium text-brand-purple-light">
+                    <h4 className="text-xl font-medium text-brand-purple-light font-mono">
                       are you the best in the market?
                     </h4>
                     <p className="text-text-secondary font-medium text-lg lowercase">
@@ -689,7 +691,7 @@ const Pitch = () => {
                 }}
                 className="max-w-2xl mx-auto space-y-8 text-center"
               >
-                <h3 className="text-3xl lg:text-4xl font-medium text-brand-purple-light lowercase">
+                <h3 className="text-3xl lg:text-4xl font-medium text-brand-purple-light lowercase font-mono">
                   how to invest in opensox.ai?
                 </h3>
                 <div className="flex justify-center">
