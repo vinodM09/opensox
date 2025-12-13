@@ -1,12 +1,11 @@
 "use client";
 import Footer from "@/components/landing-sections/footer";
 import Header from "@/components/ui/header";
-import { ShineBorder } from "@/components/ui/shine-borders";
 import { motion } from "framer-motion";
 import { Check, CornerDownRight, Target, Terminal } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import PrimaryButton from "@/components/ui/custom-button";
 import PaymentFlow from "@/components/payment/PaymentFlow";
 import { ActiveTag } from "@/components/ui/ActiveTag";
@@ -158,8 +157,8 @@ const Pricing = () => {
                 {opensoxFeatures.map((feature, index) => {
                   return (
                     <motion.li
-                      initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
-                      animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                      initial={{ opacity: 0, y: 30 }}
+                      animate={{ opacity: 1, y: 0 }}
                       transition={{
                         duration: 0.6,
                         ease: "easeOut",
@@ -239,8 +238,8 @@ const Pricing = () => {
                 {whySub.map((sub, index) => {
                   return (
                     <motion.p
-                      initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
-                      animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                      initial={{ opacity: 0, y: 30 }}
+                      animate={{ opacity: 1, y: 0 }}
                       transition={{
                         duration: 0.6,
                         ease: "easeOut",
@@ -298,7 +297,7 @@ const PricingCard = () => {
     <div className="py-2">
       <div className=" border-border-primary w-full mx-auto flex h-full">
         <div className="border-dashed border-border-primary w-full lg:w-max mx-auto relative h-full">
-          <div className="w-full h-full lg:w-[500px] relative overflow-hidden mx-auto py-10 pb-14 flex flex-col rounded-3xl isolate before:absolute before:inset-0 before:rounded-3xl before:p-[1.5px] before:bg-[linear-gradient(135deg,#7150E7,#C89BFF,#432BA0)] before:[-webkit-mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)] before:[-webkit-mask-composite:xor] before:[mask-composite:exclude] before:content-['']">
+            <div className="w-full h-full lg:w-[500px] relative overflow-hidden mx-auto py-10 pb-14 flex flex-col rounded-3xl isolate before:absolute before:inset-0 before:rounded-3xl before:p-[1.5px] before:bg-border-gradient before:[-webkit-mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)] before:[-webkit-mask-composite:xor] before:[mask-composite:exclude] before:content-['']">
             <Image
               src="/assets/card_bg.svg"
               alt="background"
@@ -378,7 +377,7 @@ const SecondaryPricingCard = ({ callbackUrl }: { callbackUrl: string }) => {
     <div className="py-2">
       <div className=" border-border-primary w-full mx-auto flex h-full">
         <div className="border-dashed border-border-primary w-full lg:w-max mx-auto relative h-full">
-          <div className="w-full h-full lg:w-[500px] relative overflow-hidden mx-auto py-10 pb-14 flex flex-col rounded-3xl isolate before:absolute before:inset-0 before:rounded-3xl before:p-[1.5px] before:bg-[linear-gradient(135deg,#7150E7,#C89BFF,#432BA0)] before:[-webkit-mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)] before:[-webkit-mask-composite:xor] before:[mask-composite:exclude] before:content-['']">
+          <div className="w-full h-full lg:w-[500px] relative overflow-hidden mx-auto py-10 pb-14 flex flex-col rounded-3xl isolate before:absolute before:inset-0 before:rounded-3xl before:p-[1.5px] before:bg-border-gradient before:[-webkit-mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)] before:[-webkit-mask-composite:xor] before:[mask-composite:exclude] before:content-['']">
             <Image
               src="/assets/card_bg.svg"
               alt="background"

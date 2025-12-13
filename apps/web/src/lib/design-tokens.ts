@@ -33,6 +33,11 @@ export const colors = {
       // Effects
       glow: "rgba(145, 89, 226, 0.5)",
       grid: "#3f1fbc", // For flickering grid effect
+      borderGradient: {
+        start: "#7150E7",
+        middle: "#C89BFF",
+        end: "#432BA0"
+      }, // Gradient used for the border of pricing cards
     },
   },
 

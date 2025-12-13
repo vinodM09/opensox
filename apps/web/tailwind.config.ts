@@ -10,6 +10,15 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        // Gradient used for card borders (pricing cards), sourced from brand design tokens
+        "border-gradient": `linear-gradient(
+          135deg,
+          ${colors.brand.purple.borderGradient.start},
+          ${colors.brand.purple.borderGradient.middle},
+          ${colors.brand.purple.borderGradient.end}
+        )`,
+      },
       colors: {
         // Base colors
         background: colors.background.primary,
