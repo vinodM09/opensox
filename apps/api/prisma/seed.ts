@@ -1,5 +1,7 @@
 import { PrismaClient } from '@prisma/client';
 
+const MILLIS_PER_YEAR = 365 * 24 * 60 * 60 * 1000;
+
 const prisma = new PrismaClient();
 
 async function main() {
@@ -7,7 +9,6 @@ async function main() {
 
   // Clear existing data (optional - only if you want fresh data each time)
   // Uncomment if you want to reset data on each seed
-  // await prisma.testimonial.deleteMany();
   // await prisma.payment.deleteMany();
   // await prisma.subscription.deleteMany();
   // await prisma.account.deleteMany();
@@ -66,7 +67,7 @@ async function main() {
           planId: testPlan.id,
           status: 'active',
           startDate: new Date(),
-          endDate: new Date(Date.now() + 365 * 24 * 60 * 60 * 1000), // 1 year from now
+          endDate: new Date(Date.now() + MILLIS_PER_YEAR), // 1 year from now
           autoRenew: true,
         },
       })
@@ -76,7 +77,7 @@ async function main() {
           planId: testPlan.id,
           status: 'active',
           startDate: new Date(),
-          endDate: new Date(Date.now() + 365 * 24 * 60 * 60 * 1000), // 1 year from now
+          endDate: new Date(Date.now() + MILLIS_PER_YEAR), // 1 year from now
           autoRenew: true,
         },
       });
@@ -99,26 +100,6 @@ async function main() {
     },
   });
   console.log('✅ Created test payment');
-
-  // Create test testimonial (if Testimonial model exists)
-  try {
-    const testTestimonial = await (prisma as any).testimonial.upsert({
-      where: {
-        userId: premiumUser.id,
-      },
-      update: {},
-      create: {
-        userId: premiumUser.id,
-        name: 'Premium User',
-        content: 'Opensox has been amazing! The platform makes managing open source projects so much easier.',
-        avatar: 'https://i.pravatar.cc/150?u=premium',
-      },
-    });
-    console.log('✅ Created test testimonial');
-  } catch (error) {
-    // Testimonial model might not exist in current schema
-    console.log('⚠️  Skipping testimonial (model may not exist)');
-  }
 
   // Create QueryCount if it doesn't exist
   try {
