@@ -68,7 +68,12 @@
   }
 }
 
+@supports (font-variation-settings: normal) {
+  html {
+    font-display: swap;
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }
-
