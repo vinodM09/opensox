@@ -1,0 +1,18 @@
+/**
+ * Font Loading Optimization
+ * 
+ * This prevents fonts from blocking text rendering
+ * Text will display in fallback font while custom font loads
+ */
+
+/* Geist Sans font-display override */
+@font-face {
+  font-family: '__geist_Sans_0a6092';
+  font-display: swap;
+}
+
+/* DM Mono font-display override */  
+@font-face {
+  font-family: '__DM_Mono_d5a8f2';
+  font-display: swap;
+}
