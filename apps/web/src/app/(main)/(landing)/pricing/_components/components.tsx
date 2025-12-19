@@ -245,7 +245,7 @@ export const ProPlanCard = ({ planIdOk, premiumPlanId }: ProPlanCardProps) => {
                         <div className="w-full border-dashed border-border px-6 lg:px-10 py-4">
                             {/* Lazy-loaded payment flow */}
                             <LazyPaymentFlow
-                                planId={planIdOk ? premiumPlanId! : ""}
+                                planId={premiumPlanId ?? ""}
                                 planName="Opensox Pro"
                                 description="Annual Subscription"
                                 buttonText={planIdOk ? "Invest" : "Unavailable"}
@@ -320,9 +320,7 @@ export const TestimonialsSection = () => {
                         >
                             <PremiumTestimonialCard username={testimonial.username} />
                             <div className="text-pretty">
-                                {typeof testimonial.content === "string"
-                                    ? testimonial.content
-                                    : testimonial.content}
+                                {testimonial.content}
                             </div>
                         </div>
                     ))}
@@ -333,9 +331,7 @@ export const TestimonialsSection = () => {
                         <div key={testimonial.id} className="flex flex-col gap-6">
                             <PremiumTestimonialCard username={testimonial.username} />
                             <div>
-                                {typeof testimonial.content === "string"
-                                    ? testimonial.content
-                                    : testimonial.content}
+                                {testimonial.content}
                             </div>
                         </div>
                     ))}
@@ -349,9 +345,7 @@ export const TestimonialsSection = () => {
                         >
                             <PremiumTestimonialCard username={testimonial.username} />
                             <div className="text-pretty">
-                                {typeof testimonial.content === "string"
-                                    ? testimonial.content
-                                    : testimonial.content}
+                                {testimonial.content}
                             </div>
                         </div>
                     ))}
