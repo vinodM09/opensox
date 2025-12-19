@@ -16,7 +16,7 @@ export function AnimatedFeaturesSection({
 
     return (
         <div ref={containerRef} className="h-full relative">
-            <div className="py-8 border-b border-[#252525]">
+            <div className="py-8 border-b border-border">
                 <motion.h2
                     initial={{ opacity: 0, y: 20 }}
                     animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -31,8 +31,8 @@ export function AnimatedFeaturesSection({
                 </motion.h2>
             </div>
 
-            <div className="w-full h-full flex flex-col gap-6 border-b border-[#252525]">
-                <ul className="flex flex-col lg:flex-row divide-y lg:divide-y-0 lg:divide-x divide-[#252525] h-full">
+            <div className="w-full h-full flex flex-col gap-6 border-b border-border">
+                <ul className="flex flex-col lg:flex-row divide-y lg:divide-y-0 lg:divide-x divide-border h-full">
                     {features.map((feature, index) => (
                         <motion.li
                             initial={{ opacity: 0, y: 20 }}
@@ -48,7 +48,7 @@ export function AnimatedFeaturesSection({
                         >
                             <div className="flex flex-col gap-4 w-full h-full">
                                 <div className="flex gap-4 items-center">
-                                    <span className="text-6xl font-mono font-semibold text-transparent bg-clip-text bg-gradient-to-b from-[#a472ea] to-[#341e7b]">
+                                    <span className="text-6xl font-mono font-semibold text-transparent bg-clip-text bg-gradient-to-b from-brand-purple-light to-brand-purple-dark">
                                         {index + 1}
                                     </span>
                                     <div className="flex items-center gap-2">
@@ -77,7 +77,7 @@ export function AnimatedFeaturesSection({
                                             key={i}
                                             className="text-sm flex items-center gap-4"
                                         >
-                                            <CornerDownRightIcon className="size-4 flex-shrink-0 text-[#a472ea]" />
+                                            <CornerDownRightIcon className="size-4 flex-shrink-0 text-brand-purple-light" />
                                             {f}
                                         </li>
                                     ))}

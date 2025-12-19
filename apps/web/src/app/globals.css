@@ -63,14 +63,11 @@
   body {
     @apply bg-background text-foreground font-sans;
   }
-  code, pre, kbd {
-    @apply font-mono;
-  }
-}
 
-@supports (font-variation-settings: normal) {
-  html {
-    font-display: swap;
+  code,
+  pre,
+  kbd {
+    @apply font-mono;
   }
 }
 

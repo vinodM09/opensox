@@ -21,6 +21,7 @@ interface LazyPaymentFlowProps {
     buttonText?: string;
     buttonClassName?: string;
     callbackUrl?: string;
+    buttonLocation?: string;
 }
 
 export function LazyPaymentFlow({
@@ -30,6 +31,7 @@ export function LazyPaymentFlow({
     buttonText = "Invest",
     buttonClassName,
     callbackUrl,
+    buttonLocation,
 }: LazyPaymentFlowProps) {
     const [isReady, setIsReady] = useState(false);
 
@@ -56,6 +58,7 @@ export function LazyPaymentFlow({
             buttonText={buttonText}
             buttonClassName={buttonClassName}
             callbackUrl={callbackUrl}
+            buttonLocation={buttonLocation}
         />
     );
 }
