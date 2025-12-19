@@ -40,7 +40,7 @@ export function HeaderStatic({ title, animate = false }: HeaderStaticProps) {
             <div
                 style={{
                     background:
-                        "radial-gradient(circle at center, #101010 30%, transparent 100%)",
+                        `radial-gradient(circle at center, ${colors.background.primary} 30%, transparent 100%)`,
                 }}
                 className="h-full w-[100%] right-0 top-0 z-20 absolute"
             />
